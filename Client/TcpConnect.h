@@ -23,5 +23,6 @@ private:
     int m_localPort;
     int m_serverPort;
     std::string m_serverAddr;
+    std::string m_localAddr;
 
 };

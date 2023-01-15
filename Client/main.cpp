@@ -1,4 +1,5 @@
 #include "TcpConnect.h"
+#include <chrono>
 #include <functional>
 using namespace std;
 
@@ -17,7 +18,7 @@ int main() {
                 std::string msg = "I'm is client, count=";
                 msg += to_string(count++);
                 tcpConnect.SendMsg(msg);
-                std::this_thread::sleep_for(std::chrono::milliseconds(10));
+                std::this_thread::sleep_for(std::chrono::seconds(3));
             }    
         }
     ).detach();
